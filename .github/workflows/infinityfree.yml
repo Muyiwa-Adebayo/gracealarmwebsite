@@ -31,7 +31,7 @@ jobs:
           protocol: ftp
           port: 21
           local-dir: ./dist/
-          server-dir: htdocs/
+          server-dir: gracealarm.free.nf/htdocs/
           # Optimization
           dangerous-clean-slate: false 
           # Verbose logging to debug if it hangs
