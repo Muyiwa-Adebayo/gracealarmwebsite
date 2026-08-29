@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- SEO -->
+  <title>Grace Alarm — Wake Up With the Word</title>
+  <meta name="description" content="A gentle Android alarm that wakes you with soft music and a Bible verse read aloud. 4 translations, 8 themes, 100% offline. Free, no ads.">
+  <meta name="keywords" content="Grace Alarm, Christian alarm app, wake up with Bible verse, morning devotional app, Bible TTS alarm, Android Bible alarm">
+  <meta name="author" content="WorkPress">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gracealarm.free.nf/">
+  <meta property="og:title" content="Grace Alarm — Wake Up With the Word">
+  <meta property="og:description" content="A gentle Android alarm that wakes you with soft music and a Bible verse read aloud. 4 translations, 8 themes, 100% offline.">
+  <meta property="og:image" content="https://gracealarm.free.nf/assets/images/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Grace Alarm — Wake Up With the Word">
+  <meta name="twitter:description" content="A gentle Android alarm that wakes you with soft music and a Bible verse read aloud.">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Grace Alarm",
+    "operatingSystem": "Android 7.0+",
+    "applicationCategory": "LifestyleApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Wake up with soft music and a Bible verse read aloud. 4 Bible translations, 8 verse themes, 100% offline.",
+    "downloadUrl": "https://gracealarm.free.nf/downloads/GraceAlarm-v1.0.apk"
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="#" class="nav-brand">
+          <svg class="nav-brand-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="8" fill="#7A4F2E"/>
+            <path d="M16 6C10.48 6 6 10.48 6 16s4.48 10 10 10 10-4.48 10-10S21.52 6 16 6zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm-1 13.5v-2h2v2h-2zm1-4.5a5 5 0 100-10 5 5 0 000 10z" fill="#F4EEE2" opacity="0.9"/>
+            <circle cx="16" cy="12" r="2.5" fill="#F4EEE2"/>
+            <rect x="15" y="15" width="2" height="7" rx="1" fill="#F4EEE2"/>
+          </svg>
+          Grace Alarm
+        </a>
+
+        <div class="nav-links" id="nav-links">
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#themes">Themes</a>
+          <a href="#download" class="btn btn-primary nav-cta">Download</a>
+        </div>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge reveal">
+          <span class="hero-badge-dot"></span>
+          Free &amp; 100% Offline
+        </div>
+
+        <h1 class="reveal reveal-delay-1">Wake Up With<br>the Word</h1>
+
+        <p class="reveal reveal-delay-2">
+          Soft music. A Bible verse read aloud. Every morning, before the noise of the day begins.
+        </p>
+
+        <div class="hero-actions reveal reveal-delay-3">
+          <a href="#download" class="btn btn-primary" id="cta-hero">
+            <svg class="btn-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 3v10m0 0l-3.5-3.5M10 13l3.5-3.5M4 17h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Download APK
+          </a>
+          <a href="#features" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal reveal-delay-2">
+        <img src="assets/images/mockup-alarm-triggered.png" alt="Grace Alarm App — Triggered Alarm Screen" class="hero-mockup-img" width="340" height="602">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="features-header">
+        <span class="section-subtitle reveal">Features</span>
+        <h2 class="reveal reveal-delay-1">Why Grace Alarm?</h2>
+        <p class="reveal reveal-delay-2">Everything you need for a peaceful, faith-filled morning — nothing you don't.</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Card 1: Silent/DND -->
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3a7 7 0 00-7 7v4l-2 2v1h18v-1l-2-2v-4a7 7 0 00-7-7zm0 18a2 2 0 01-2-2h4a2 2 0 01-2 2z" fill="currentColor"/>
+              <line x1="1" y1="1" x2="23" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Works on Silent &amp; DND</h3>
+          <p>Never miss your morning verse — even when your phone is on silent or Do Not Disturb.</p>
+        </div>
+
+        <!-- Card 2: Translations -->
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4h6a2 2 0 012 2v14l-3-2-3 2V6a2 2 0 00-2-2z" fill="currentColor" opacity="0.5"/>
+              <path d="M14 4h6a2 2 0 012 2v14l-3-2-3 2V6a2 2 0 00-2-2z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>4 Bible Translations</h3>
+          <p>Choose from KJV, NKJV, NIV, or NLT — all bundled offline. No internet needed.</p>
+        </div>
+
+        <!-- Card 3: Gentle Wake-Up -->
+        <div class="feature-card reveal reveal-delay-3">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="3" fill="currentColor"/>
+              <path d="M12 2v2m0 16v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M2 12h2m16 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Gentle Wake-Up</h3>
+          <p>Soft music plays for 5 seconds before your verse is read aloud. No jarring buzzers.</p>
+        </div>
+
+        <!-- Card 4: Offline & Private -->
+        <div class="feature-card reveal reveal-delay-4">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="5" y="11" width="14" height="10" rx="2" fill="currentColor"/>
+              <path d="M8 11V7a4 4 0 118 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="12" cy="16" r="1.5" fill="#F4EEE2"/>
+            </svg>
+          </div>
+          <h3>100% Offline &amp; Private</h3>
+          <p>Works fully offline. No accounts. No personal data collected. Just you and the Word.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="how-it-works-header">
+        <span class="section-subtitle reveal">How It Works</span>
+        <h2 class="reveal reveal-delay-1">Three Simple Steps</h2>
+        <p class="reveal reveal-delay-2">Set it once. Wake up inspired every morning.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step reveal reveal-delay-1">
+          <div class="step-number">1</div>
+          <h3>Set Your Alarm</h3>
+          <p>Pick a time. Choose random verses or select from 8 spiritual themes.</p>
+        </div>
+
+        <div class="step reveal reveal-delay-2">
+          <div class="step-number">2</div>
+          <h3>Wake Gently</h3>
+          <p>Soft music begins, then your Bible verse is read aloud through text-to-speech.</p>
+        </div>
+
+        <div class="step reveal reveal-delay-3">
+          <div class="step-number">3</div>
+          <h3>Start Your Day</h3>
+          <p>See the verse on screen. Snooze to hear it again, or dismiss when you're ready.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THEMES & TRANSLATIONS ===== -->
+  <section class="themes-section" id="themes">
+    <div class="container">
+      <div class="themes-header">
+        <span class="section-subtitle reveal">Themes &amp; Translations</span>
+        <h2 class="reveal reveal-delay-1">Verses That Speak to You</h2>
+        <p class="reveal reveal-delay-2">Choose verses that match your season. Select one theme or many — the app picks a fresh verse each morning.</p>
+      </div>
+
+      <div class="themes-content">
+        <div class="themes-block reveal reveal-delay-1">
+          <h3>8 Verse Themes</h3>
+          <div class="theme-chips">
+            <button class="theme-chip" data-theme="faith" data-verse="&ldquo;Now faith is the substance of things hoped for, the evidence of things not seen.&rdquo;" data-ref="— Hebrews 11:1 (KJV)">Faith</button>
+            <button class="theme-chip" data-theme="gratitude" data-verse="&ldquo;Give thanks in all circumstances; for this is God's will for you in Christ Jesus.&rdquo;" data-ref="— 1 Thessalonians 5:18 (NIV)">Gratitude</button>
+            <button class="theme-chip" data-theme="anxiety" data-verse="&ldquo;Cast all your anxiety on him because he cares for you.&rdquo;" data-ref="— 1 Peter 5:7 (NIV)">Anxiety</button>
+            <button class="theme-chip" data-theme="salvation" data-verse="&ldquo;For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.&rdquo;" data-ref="— John 3:16 (KJV)">Salvation</button>
+            <button class="theme-chip" data-theme="hope" data-verse="&ldquo;For I know the plans I have for you, declares the LORD, plans to prosper you and not to harm you, plans to give you hope and a future.&rdquo;" data-ref="— Jeremiah 29:11 (NIV)">Hope</button>
+            <button class="theme-chip" data-theme="love" data-verse="&ldquo;And now these three remain: faith, hope and love. But the greatest of these is love.&rdquo;" data-ref="— 1 Corinthians 13:13 (NIV)">Love</button>
+            <button class="theme-chip" data-theme="healing" data-verse="&ldquo;He heals the brokenhearted and binds up their wounds.&rdquo;" data-ref="— Psalm 147:3 (NIV)">Healing</button>
+            <button class="theme-chip" data-theme="prosperity" data-verse="&ldquo;Beloved, I wish above all things that thou mayest prosper and be in health, even as thy soul prospereth.&rdquo;" data-ref="— 3 John 1:2 (KJV)">Prosperity</button>
+          </div>
+          <div class="theme-verse-preview" id="theme-verse-preview">
+            <p id="theme-verse-text">Click a theme to see a sample verse</p>
+          </div>
+        </div>
+
+        <div class="translations-block reveal reveal-delay-2">
+          <h3>4 Bible Translations</h3>
+          <div class="translation-pills">
+            <span class="translation-pill">KJV</span>
+            <span class="translation-pill">NKJV</span>
+            <span class="translation-pill">NIV</span>
+            <span class="translation-pill">NLT</span>
+          </div>
+          <p class="translations-note">All translations are bundled with the app — no downloads or internet required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VERSE SHOWCASE ===== -->
+  <section class="verse-showcase" id="verses">
+    <div class="container">
+      <div class="verse-showcase-header">
+        <span class="section-subtitle reveal">Daily Verses</span>
+        <h2 class="reveal reveal-delay-1">A Fresh Word Every Morning</h2>
+        <p class="reveal reveal-delay-2">No repeats for 7 days. Each morning brings a new verse to start your day.</p>
+      </div>
+
+      <div class="verse-carousel reveal reveal-delay-1" id="verse-carousel">
+        <div class="verse-slide active" data-slide="0">
+          <p class="verse-text">"The Lord is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters."</p>
+          <span class="verse-reference">Psalm 23:1–2 <span class="verse-translation-tag">KJV</span></span>
+        </div>
+        <div class="verse-slide" data-slide="1">
+          <p class="verse-text">"For I know the plans I have for you, declares the LORD, plans to prosper you and not to harm you, plans to give you hope and a future."</p>
+          <span class="verse-reference">Jeremiah 29:11 <span class="verse-translation-tag">NIV</span></span>
+        </div>
+        <div class="verse-slide" data-slide="2">
+          <p class="verse-text">"Be anxious for nothing, but in everything by prayer and supplication, with thanksgiving, let your requests be made known to God."</p>
+          <span class="verse-reference">Philippians 4:6 <span class="verse-translation-tag">NKJV</span></span>
+        </div>
+        <div class="verse-slide" data-slide="3">
+          <p class="verse-text">"Trust in the LORD with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight."</p>
+          <span class="verse-reference">Proverbs 3:5–6 <span class="verse-translation-tag">NIV</span></span>
+        </div>
+        <div class="verse-slide" data-slide="4">
+          <p class="verse-text">"God is our refuge and strength, a very present help in trouble. Therefore we will not fear."</p>
+          <span class="verse-reference">Psalm 46:1–2 <span class="verse-translation-tag">NLT</span></span>
+        </div>
+      </div>
+
+      <div class="verse-dots" id="verse-dots">
+        <button class="verse-dot active" data-dot="0" aria-label="Verse 1"></button>
+        <button class="verse-dot" data-dot="1" aria-label="Verse 2"></button>
+        <button class="verse-dot" data-dot="2" aria-label="Verse 3"></button>
+        <button class="verse-dot" data-dot="3" aria-label="Verse 4"></button>
+        <button class="verse-dot" data-dot="4" aria-label="Verse 5"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DOWNLOAD CTA ===== -->
+  <section class="download-cta" id="download">
+    <div class="container">
+      <div class="download-box reveal">
+        <h2>Download Grace Alarm</h2>
+        <p>Free. No ads. No accounts. Just the Word.</p>
+
+        <div class="download-meta">
+          <span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M4 7h6M7 4v6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            Version 1.0
+          </span>
+          <span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 7h2V4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Android 7.0+
+          </span>
+          <span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            100% Free
+          </span>
+        </div>
+
+        <a href="#" class="btn btn-primary" id="cta-download" onclick="handleDownload(event)">
+          <svg class="btn-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 3v10m0 0l-3.5-3.5M10 13l3.5-3.5M4 17h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Download APK — Coming Soon
+        </a>
+
+        <div class="install-instructions">
+          <button class="install-toggle" id="install-toggle" aria-expanded="false">
+            <span class="install-toggle-arrow">▶</span>
+            How to install
+          </button>
+          <div class="install-steps" id="install-steps">
+            <ol>
+              <li>Open your Downloads folder</li>
+              <li>Tap <strong>GraceAlarm-v1.0.apk</strong></li>
+              <li>If prompted, tap "Settings" → enable "Install unknown apps" for your browser</li>
+              <li>Tap <strong>Install</strong> → <strong>Open</strong></li>
+            </ol>
+            <div class="install-note">
+              ⚠️ Your phone may warn about installing from outside the Play Store. This is normal for direct downloads. Grace Alarm is safe and ad-free.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="mailto:info.workpressmail@gmail.com">Contact</a>
+        </div>
+        <div class="footer-credit">
+          Developed by <a href="https://workpress.free.nf/?i=1" target="_blank" rel="noopener noreferrer">WorkPress</a>
+        </div>
+        <div class="footer-copy">
+          Made with ❤️ and faith · © 2026 Grace Alarm
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== COOKIE CONSENT ===== -->
+  <div class="cookie-banner" id="cookie-banner">
+    <div class="cookie-inner">
+      <p class="cookie-text">
+        We use cookies to analyze site traffic and improve your experience. See our <a href="privacy.html">Privacy Policy</a>.
+      </p>
+      <div class="cookie-actions">
+        <button class="cookie-btn cookie-btn-decline" id="cookie-decline">Decline</button>
+        <button class="cookie-btn cookie-btn-accept" id="cookie-accept">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/analytics.js"></script>
+</body>
+</html>
