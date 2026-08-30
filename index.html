@@ -10,9 +10,11 @@
   <meta name="description" content="A gentle Android alarm that wakes you with soft music and a Bible verse read aloud. 4 translations, 8 themes, 100% offline. Free, no ads.">
   <meta name="keywords" content="Grace Alarm, Christian alarm app, wake up with Bible verse, morning devotional app, Bible TTS alarm, Android Bible alarm">
   <meta name="author" content="WorkPress">
+  <link rel="canonical" href="https://gracealarm.free.nf/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Grace Alarm">
   <meta property="og:url" content="https://gracealarm.free.nf/">
   <meta property="og:title" content="Grace Alarm — Wake Up With the Word">
   <meta property="og:description" content="A gentle Android alarm that wakes you with soft music and a Bible verse read aloud. 4 translations, 8 themes, 100% offline.">
@@ -22,6 +24,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Grace Alarm — Wake Up With the Word">
   <meta name="twitter:description" content="A gentle Android alarm that wakes you with soft music and a Bible verse read aloud.">
+  <meta name="twitter:image" content="https://gracealarm.free.nf/assets/images/og-image.jpg">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -35,6 +38,11 @@
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "WorkPress",
+      "url": "https://workpress.free.nf"
     },
     "description": "Wake up with soft music and a Bible verse read aloud. 4 Bible translations, 8 verse themes, 100% offline.",
     "downloadUrl": "https://gracealarm.free.nf/downloads/GraceAlarm-v1.0.apk"
@@ -61,10 +69,11 @@
       <nav class="nav">
         <a href="#" class="nav-brand">
           <svg class="nav-brand-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="32" height="32" rx="8" fill="#7A4F2E"/>
-            <path d="M16 6C10.48 6 6 10.48 6 16s4.48 10 10 10 10-4.48 10-10S21.52 6 16 6zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm-1 13.5v-2h2v2h-2zm1-4.5a5 5 0 100-10 5 5 0 000 10z" fill="#F4EEE2" opacity="0.9"/>
-            <circle cx="16" cy="12" r="2.5" fill="#F4EEE2"/>
-            <rect x="15" y="15" width="2" height="7" rx="1" fill="#F4EEE2"/>
+            <path d="M3 4C3 2.9 3.9 2 5 2H27C28.1 2 29 2.9 29 4V26C29 27.1 28.1 28 27 28H7C4.8 28 3 26.2 3 24V4Z" fill="#7A4F2E"/>
+            <rect x="5" y="22" width="22" height="3.5" rx="1.75" fill="#F4EEE2"/>
+            <path d="M13.5 5.5C13.5 4.7 14.2 4 15 4H17C17.8 4 18.5 4.7 18.5 5.5V8.5H21.5C22.3 8.5 23 9.2 23 10V12C23 12.8 22.3 13.5 21.5 13.5H18.5V18.5C18.5 19.3 17.8 20 17 20H15C14.2 20 13.5 19.3 13.5 18.5V13.5H10.5C9.7 13.5 9 12.8 9 12V10C9 9.2 9.7 8.5 10.5 8.5H13.5V5.5Z" fill="#F4EEE2"/>
+            <circle cx="21" cy="16" r="4.5" fill="#6F7A4A"/>
+            <path d="M21 13.5V16.2L22.8 17.4" stroke="#F4EEE2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           Grace Alarm
         </a>
@@ -193,18 +202,33 @@
           <div class="step-number">1</div>
           <h3>Set Your Alarm</h3>
           <p>Pick a time. Choose random verses or select from 8 spiritual themes.</p>
+          <img src="assets/images/mockup-create-alarm.png"
+               alt="Grace Alarm — Create Alarm screen showing time picker and theme selection"
+               class="step-mockup"
+               width="180" height="319"
+               loading="lazy">
         </div>
 
         <div class="step reveal reveal-delay-2">
           <div class="step-number">2</div>
           <h3>Wake Gently</h3>
           <p>Soft music begins, then your Bible verse is read aloud through text-to-speech.</p>
+          <img src="assets/images/mockup-alarm-triggered.png"
+               alt="Grace Alarm — Triggered alarm screen showing gentle wake-up and Scripture playback"
+               class="step-mockup"
+               width="180" height="319"
+               loading="lazy">
         </div>
 
         <div class="step reveal reveal-delay-3">
           <div class="step-number">3</div>
           <h3>Start Your Day</h3>
           <p>See the verse on screen. Snooze to hear it again, or dismiss when you're ready.</p>
+          <img src="assets/images/mockup-home-alarms.png"
+               alt="Grace Alarm — Home screen showing Today's Scripture card and active alarms"
+               class="step-mockup"
+               width="180" height="319"
+               loading="lazy">
         </div>
       </div>
     </div>
@@ -216,7 +240,7 @@
       <div class="themes-header">
         <span class="section-subtitle reveal">Themes &amp; Translations</span>
         <h2 class="reveal reveal-delay-1">Verses That Speak to You</h2>
-        <p class="reveal reveal-delay-2">Choose verses that match your season. Select one theme or many — the app picks a fresh verse each morning.</p>
+        <p class="reveal reveal-delay-2">Let the app pick a random verse, or choose from 8 spiritual themes. Select one theme or many — wake up inspired each morning.</p>
       </div>
 
       <div class="themes-content">
