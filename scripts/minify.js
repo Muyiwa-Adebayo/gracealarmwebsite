@@ -40,7 +40,14 @@ function minifyHTML(html) {
 
 // 3. Minify CSS
 function minifyCSS(css) {
-  return css
+  // Preserve calc(...) expressions AS-IS to protect mandatory whitespace around '+' and '-' and avoid breaking CSS variables
+  const calcs = [];
+  let protectedCSS = css.replace(/calc\((?:[^)(]+|\([^)(]*\))*\)/g, (match) => {
+    calcs.push(match);
+    return `___CALC_PLACEHOLDER_${calcs.length - 1}___`;
+  });
+
+  protectedCSS = protectedCSS
     // Remove comments
     .replace(/\/\*[\s\S]*?\*\//g, '')
     // Remove whitespace around symbols
@@ -50,6 +57,9 @@ function minifyCSS(css) {
     // Collapse spaces
     .replace(/\s{2,}/g, ' ')
     .trim();
+
+  // Restore preserved calc expressions
+  return protectedCSS.replace(/___CALC_PLACEHOLDER_(\d+)___/g, (_, index) => calcs[Number(index)]);
 }
 
 // 4. Minify JS (safe regex-based minifier for plain ES6+ code)

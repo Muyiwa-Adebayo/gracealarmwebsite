@@ -46,7 +46,7 @@
         });
         ticking = true;
       }
-    });
+    }, { passive: true });
   }
 
   // ==============================
@@ -57,21 +57,33 @@
     const links = document.getElementById('nav-links');
     if (!toggle || !links) return;
 
+    function closeNav() {
+      links.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+    }
+
     toggle.addEventListener('click', () => {
       const isOpen = links.classList.toggle('open');
       toggle.classList.toggle('open', isOpen);
       toggle.setAttribute('aria-expanded', isOpen);
       document.body.style.overflow = isOpen ? 'hidden' : '';
+      document.documentElement.style.overflow = isOpen ? 'hidden' : '';
     });
 
     // Close nav when a link is clicked
     links.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        links.classList.remove('open');
-        toggle.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
+      link.addEventListener('click', closeNav);
+    });
+
+    // Close nav on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && links.classList.contains('open')) {
+        closeNav();
+        toggle.focus();
+      }
     });
   }
 
@@ -166,15 +178,10 @@
         setTimeout(() => {
           verseText.innerHTML = verse + '<br><strong style="color: var(--color-primary); font-style: normal;">' + ref + '</strong>';
           verseText.classList.add('visible');
+          verseText.classList.add('active-verse');
         }, 200);
       });
     });
-
-    // Initial state — make text visible
-    verseText.style.opacity = '0.6';
-    verseText.style.fontStyle = 'normal';
-    verseText.style.color = 'var(--color-text-muted)';
-    verseText.style.fontSize = '0.875rem';
   }
 
   // ==============================
@@ -232,7 +239,12 @@
   // ==============================
   function loadGA4() {
     // GA4 Measurement ID — replace with actual ID when set up
-    const GA_ID = 'G-XXXXXXXXXX';
+    const GA_ID = 'G-VNTSYZ86T6';
+
+    if (!GA_ID || GA_ID === 'G-XXXXXXXXXX') {
+      console.info('GA4: Measurement ID is not yet configured. Skipping tracking script injection.');
+      return;
+    }
 
     if (document.getElementById('ga4-script')) return;
 
@@ -259,20 +271,23 @@
   // ==============================
   // Download Handler
   // ==============================
-  window.handleDownload = function (e) {
-    // APK not yet available — show message
-    e.preventDefault();
+  window.handleDownload = function () {
     const btn = document.getElementById('cta-download');
+    if (!btn) return;
     const originalText = btn.innerHTML;
 
-    btn.innerHTML = '<svg class="btn-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M10 6v4M10 14h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Coming Soon — Stay Tuned!';
-    btn.style.pointerEvents = 'none';
+    btn.innerHTML = '<svg class="btn-icon" viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg> Downloading APK...';
 
     setTimeout(() => {
       btn.innerHTML = originalText;
-      btn.style.pointerEvents = '';
     }, 3000);
   };
+
+  function initDownloadHandler() {
+    const btn = document.getElementById('cta-download');
+    if (!btn) return;
+    btn.addEventListener('click', window.handleDownload);
+  }
 
   // ==============================
   // Smooth Scroll for Anchor Links
@@ -311,5 +326,6 @@
     initInstallToggle();
     initCookieConsent();
     initSmoothScroll();
+    initDownloadHandler();
   });
 })();

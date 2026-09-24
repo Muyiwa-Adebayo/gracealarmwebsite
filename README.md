@@ -30,13 +30,10 @@ Grace Alarm/
     └── images/
         ├── favicon.ico        # 32×32 Favicon
         ├── favicon.svg        # Vector Favicon
-        ├── grace-alarm-logo.png # App Logo
         ├── og-image.jpg       # 1200×630 OpenGraph social sharing image
         ├── mockup-alarm-triggered.png
         ├── mockup-create-alarm.png
         ├── mockup-home-alarms.png
-        ├── mockup-settings.png
-        ├── mockup-shared-verse.png
         └── screenshots/       # Raw source screenshots
 ```
 
