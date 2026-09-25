@@ -78,17 +78,18 @@ function minifyJS(js) {
 }
 
 // 5. Copy Directory Recursively
-function copyDirSync(src, dest) {
+function copyDirSync(src, dest, filterFn) {
   if (!fs.existsSync(src)) return;
   fs.mkdirSync(dest, { recursive: true });
   const entries = fs.readdirSync(src, { withFileTypes: true });
 
   for (const entry of entries) {
+    if (filterFn && !filterFn(entry.name)) continue;
     const srcPath = path.join(src, entry.name);
     const destPath = path.join(dest, entry.name);
 
     if (entry.isDirectory()) {
-      copyDirSync(srcPath, destPath);
+      copyDirSync(srcPath, destPath, filterFn);
     } else {
       fs.copyFileSync(srcPath, destPath);
     }
@@ -154,10 +155,14 @@ jsFiles.forEach(file => {
   }
 });
 
-// Copy assets and downloads
+// Copy assets and downloads (excluding heavy APK binaries hosted on GitHub Releases)
 console.log('📦 Copying static assets (images, icons, mockups)...');
 copyDirSync(path.join(ROOT_DIR, 'assets'), path.join(DIST_DIR, 'assets'));
-copyDirSync(path.join(ROOT_DIR, 'downloads'), path.join(DIST_DIR, 'downloads'));
+copyDirSync(
+  path.join(ROOT_DIR, 'downloads'),
+  path.join(DIST_DIR, 'downloads'),
+  (fileName) => !fileName.endsWith('.apk')
+);
 
 // Copy LICENSE if exists
 const licensePath = path.join(ROOT_DIR, 'LICENSE');
