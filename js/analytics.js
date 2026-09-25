@@ -112,7 +112,7 @@
       });
     }
 
-    const workpressLink = document.querySelector('a[href*="workpress.free.nf"]');
+    const workpressLink = document.querySelector('a[href*="davidadebayo.free.nf"]');
     if (workpressLink) {
       workpressLink.addEventListener('click', () => {
         trackEvent('workpress_credit_click');
