@@ -238,7 +238,7 @@
   // GA4 Loader
   // ==============================
   function loadGA4() {
-    // GA4 Measurement ID — replace with actual ID when set up
+    // GA4 Measurement ID
     const GA_ID = 'G-VNTSYZ86T6';
 
     if (!GA_ID || GA_ID === 'G-XXXXXXXXXX') {
@@ -248,24 +248,26 @@
 
     if (document.getElementById('ga4-script')) return;
 
+    // Initialize dataLayer and gtag function before script loads (Google standard)
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { window.dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+
     const script = document.createElement('script');
     script.id = 'ga4-script';
     script.async = true;
     script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-    document.head.appendChild(script);
 
     script.onload = function () {
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { window.dataLayer.push(arguments); }
-      window.gtag = gtag;
-      gtag('js', new Date());
-      gtag('config', GA_ID);
-
-      // Initialize analytics event tracking
+      // Initialize analytics event tracking once script is loaded
       if (typeof initAnalyticsEvents === 'function') {
         initAnalyticsEvents();
       }
     };
+
+    document.head.appendChild(script);
   }
 
   // ==============================
